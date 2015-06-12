@@ -12,72 +12,72 @@
 	<div class="clearfix"></div>
 	<?php if(is_front_page()){ ?>
 	<footer id="contact" class="site-footer template-wrap" role="contentinfo">
-		<?php 
-			$color		= oneengine_option('footer_blog_color'); 
+		<?php
+			$color		= oneengine_option('footer_blog_color');
 			$img		= oneengine_option('footer_blog_img', false, 'url');
 			$repeat		= oneengine_option('footer_blog_repeat');
 			$parallax	= oneengine_option('footer_blog_parallax');
-			$cover		= oneengine_option('footer_blog_cover'); 
-			
+			$cover		= oneengine_option('footer_blog_cover');
+
 			$bg_repeat  = '';
 			if( $repeat == 1 || $repeat == true){
 				$bg_repeat = 'background-repeat:no-repeat;';
 			}else $bg_repeat = 'background-repeat:repeat;';
-			
+
 			$bg_cover = '';
 			if( $cover == 1 || $cover == true){
 				$bg_cover = 'background-size:cover;';
 			}else $bg_cover = '';
-			
+
 			$bg_img = '';
 			if( $img ){
 				$bg_img = 'background-image:url('.$img.');';
 			}else $bg_img = '';
-			
+
 			$img		= ( ! empty ( $img ) ) 		? ''.$bg_img.'' : '';
 			$color		= ( ! empty ( $color ) )  	? 'background-color:'. $color .';' : '';
 			$repeat		= ( ! empty ( $repeat ) ) 	? ''. $bg_repeat .'' : '';
 			$cover		= ( ! empty ( $cover ) ) 	? ''. $bg_cover .'' : '';
 			$parallax 	= ( ! empty ( $parallax ) ) ? 'background-attachment: fixed;': '';
-			
-			
+
+
 			/** Style Container */
-			$style = ( 
+			$style = (
 				! empty( $img ) ||
-				! empty( $color ) || 
+				! empty( $color ) ||
 				! empty( $repeat ) ||
 				! empty( $cover ) ||
-				! empty( $parallax ) ) ? 
+				! empty( $parallax ) ) ?
 					sprintf( '%s %s %s %s %s', $img, $color, $repeat, $cover, $parallax ) : '';
 			$css = '';
-			if ( ! empty( $style ) ) {			
+			if ( ! empty( $style ) ) {
 				$css = 'style="'. $style .'" ';
 			}
         ?>
         <div class="footer-img" <?php echo $css ?>></div>
     	<div class="container">
             <div class="row">
-				<?php 
-                    $color_title		= oneengine_option('footer_blog_title_color'); 
+				<?php
+                    $color_title		= oneengine_option('footer_blog_title_color');
                     $color_sub_title	= oneengine_option('footer_blog_subtitle_color');
-                        
+
                     $color_title		= ( ! empty ( $color_title ) ) 		? 'color:'. $color_title .';' : '';
                     $color_sub_title	= ( ! empty ( $color_sub_title ) )  ? 'color:'. $color_sub_title .';' : '';
-                    
+
                     /** Style Container */
-                    $title_color = ( 
-                        ! empty( $color_title ) ) ? 
+                    $title_color = (
+                        ! empty( $color_title ) ) ?
                             sprintf( '%s', $color_title) : '';
                     $css_title_color = '';
-                    if ( ! empty( $title_color ) ) {			
+                    if ( ! empty( $title_color ) ) {
                         $css_title_color = 'style="'. $title_color .'" ';
                     }
-                    
-                    $sub_title_color = ( 
-                        ! empty( $color_sub_title ) ) ? 
+
+                    $sub_title_color = (
+                        ! empty( $color_sub_title ) ) ?
                             sprintf( '%s', $color_sub_title) : '';
                     $css_sub_title_color = '';
-                    if ( ! empty( $sub_title_color ) ) {			
+                    if ( ! empty( $sub_title_color ) ) {
                         $css_sub_title_color = 'style="'. $sub_title_color .'" ';
                     }
                 ?>
@@ -151,8 +151,8 @@
 			<div class="copyright">
 				<?php echo nl2br(oneengine_option('copyright')); ?>
 				<br>
-				<a href="http://www.enginethemes.com/themes/oneengine" target="_blank">One page WordPress theme</a>. Designed by <a href="http://www.enginethemes.com"  target="_blank">EngineThemes</a>.
-			</div>			
+				New release: <a href="https://www.enginethemes.com/themes/estateengine" target="_blank">Real Estate Theme</a>. Designed by <a href="http://www.enginethemes.com"  target="_blank">EngineThemes</a>.
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 	<?php } ?>
